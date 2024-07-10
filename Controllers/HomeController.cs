@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using NewSallesWebMvc.Models;
+using NewSallesWebMvc.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +21,13 @@ namespace NewSallesWebMvc.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+        public IActionResult About()
+        {
+            ViewData["Message"] = "New Salles Web MVC App.";
+            ViewData["Developer"] = "Ed.Vieira";
+            ViewData["email"] = "cleitoneco@gmail.com";
             return View();
         }
 
